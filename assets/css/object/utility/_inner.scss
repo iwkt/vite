@@ -1,0 +1,18 @@
+// 中央寄せラッパー（はにわまんのパターン）
+// https://haniwaman.com/inner/
+.inner {
+  width: 980px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  
+  // Container Queryでfont-sizeを定義
+  @container global (min-width: 768px) {
+    font-size: 16px;
+  }
+  
+  @container global (min-width: 1024px) {
+    font-size: 18px;
+  }
+}
+

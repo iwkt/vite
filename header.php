@@ -8,6 +8,7 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
   
+  <div class="l-container">
   <header class="l-header">
     <div class="l-header__inner">
       <div class="l-header__logo">
