@@ -3,10 +3,11 @@
 @use 'foundation/reset';
 
 // Layout
-// @import 'layout/header';
+@use 'layout/header';
 // @import 'layout/footer';
 
 // Object
+@use 'object/component/hamburger';
 // @import 'object/project/';
 // @import 'object/utility/';
 

@@ -1,0 +1,64 @@
+// ヘッダーレイアウト
+.l-header {
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.l-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+  @media (min-width: 768px) {
+    padding: 1.5rem 2rem;
+  }
+}
+
+.l-header__logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    
+    &:hover {
+      color: #0073aa;
+    }
+  }
+}
+
+.l-header__nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 99;
+  padding: 4rem 2rem 2rem;
+  overflow-y: auto;
+  
+  @media (min-width: 768px) {
+    position: static;
+    width: auto;
+    max-width: none;
+    height: auto;
+    box-shadow: none;
+    padding: 0;
+    overflow: visible;
+  }
+  
+  // メニューが開いている状態
+  &.is-open {
+    right: 0;
+  }
+}
+

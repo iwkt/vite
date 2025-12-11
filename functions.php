@@ -19,6 +19,11 @@ function theme_setup() {
     'gallery',
     'caption',
   ));
+  
+  // ナビゲーションメニューの登録
+  register_nav_menus(array(
+    'primary' => 'プライマリーメニュー',
+  ));
 }
 add_action('after_setup_theme', 'theme_setup');
 
