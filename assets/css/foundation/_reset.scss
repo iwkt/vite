@@ -1,0 +1,84 @@
+// iOS特有の問題を回避するリセットCSS
+
+// タップハイライトを無効化
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+// iOSのダブルタップズームを無効化
+* {
+  touch-action: manipulation;
+}
+
+// iOS Safariでのアニメーション最適化
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// アニメーションのカクつきを防ぐ
+*,
+*::before,
+*::after {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+// ボタンやリンクのデフォルトスタイルをリセット
+button,
+a {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+// フォーカスアウトラインの調整（アクセシビリティのため残す）
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+// 入力要素のリセット
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+}
+
+// 画像の最適化
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// リストのリセット
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// テキストの選択色
+::selection {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+

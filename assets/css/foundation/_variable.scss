@@ -1,0 +1,24 @@
+// ブレイクポイント
+$breakpoint-sm: 768px;
+$breakpoint-md: 1024px;
+$breakpoint-lg: 1980px;
+
+// メディアクエリ用のmixin
+@mixin mq-sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin mq-md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin mq-lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
